@@ -1,5 +1,4 @@
-# This script creates two slices: video and Non-video traffic. To distinguish between video and
-# Non-video traffic we make use of the "Type of Service" IPv4 header.
+# This script creates two slices: video and Non-video traffic.
 
 # Additionally, this script only works for the topology displayed at:
 # https://github.com/onstutorial/onstutorial/wiki/Flowvisor-Exercise.

@@ -18,7 +18,7 @@ fvctl -n add-flowspace dpid1_port2-video 1 100 in_port=2 video=7
 fvctl -n add-flowspace dpid1_port1-video 1 1 in_port=1 non-video=7
 
 # Add flowspaces for switch 2.
-fvctl -n add-flowspace dpid2 2 1 any non-video=7  # Priority 100.
+fvctl -n add-flowspace dpid2 2 1 any non-video=7  # Priority 1.
 
 # Add flowspaces for switch 3.
 fvctl -n add-flowspace dpid3 3 100 any video=7  # Priority 100.

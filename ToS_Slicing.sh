@@ -18,7 +18,7 @@ fvctl -n add-flowspace dpid1_port2-LoRa 1 100 in_port=2 LoRa=7
 fvctl -n add-flowspace dpid1_port1-LoRa 1 1 in_port=1 Normal=7
 
 # Add flowspaces for switch 2.
-fvctl -n add-flowspace dpid2 2 1 any Normal=7  # Priority 100.
+fvctl -n add-flowspace dpid2 2 1 any Normal=7  # Priority 1.
 
 # Add flowspaces for switch 3.
 fvctl -n add-flowspace dpid3 3 100 any LoRa=7  # Priority 100.

@@ -41,4 +41,4 @@ class FVTopo(Topo):
         self.addLink('h3', 's4', **host_link_config)
         self.addLink('h4', 's4', **host_link_config)
 
-topos = {'fvtopo': (lambda: FVTopo())}
+topos = {'fvtopo': FVTopo}

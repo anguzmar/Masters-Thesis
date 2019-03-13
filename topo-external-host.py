@@ -7,7 +7,7 @@ sys.path.append('/home/mininet/mininet')
 from mininet.topo import Topo
 from mininet.net import Mininet
 from mininet.link import Intf, TCLink
-from mininet.node import RemoteController, OVSKernelSwitch
+from mininet.node import RemoteController
 from mininet.cli import CLI
 from mininet.log import setLogLevel
 

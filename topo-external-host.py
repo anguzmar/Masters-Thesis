@@ -41,4 +41,10 @@ class FVTopo(Topo):
         self.addLink('h3', 's4', **host_link_config)
         self.addLink('h4', 's4', **host_link_config)
 
+	# Add external interface.
+	intfName = 'eth0'
+	switch = self.switches[0]
+	info('*** Adding hardware interface', intfName, 'to switch', switch.name, '\n')
+	_intf = Intf(intfName, node=switch)
+
 topos = {'fvtopo': FVTopo}

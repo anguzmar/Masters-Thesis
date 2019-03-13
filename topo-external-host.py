@@ -7,7 +7,9 @@ sys.path.append('/home/mininet/mininet')
 from mininet.topo import Topo
 from mininet.net import Mininet
 from mininet.link import Intf, TCLink
-from mininet.node import RemoteController
+from mininet.node import RemoteController, OVSKernelSwitch
+from mininet.cli import CLI
+from mininet.log import setLogLevel
 
 class FVTopo(Topo):
 # Based on:
@@ -48,12 +50,20 @@ class FVTopo(Topo):
         self.addLink('h4', 's4', **host_link_config)
 
 
-if __name__ == '__main__':
-   # Create topology. 
-   net = Mininet(topo = FVTopo, controller = RemoteController, autoSetMacs = True, 
-                 autoStaticArp = True, link = TCLink)
+def run_fvtopo():
+	# Create topology. 
+	net = Mininet(topo = FVTopo(), controller = RemoteController, autoSetMacs = True, autoStaticArp = True, link = TCLink)
 
-   # Run it.
-    net.start()
-    CLI(net)
-    net.stop()
+	# Run it.
+	net.start()
+	CLI(net)
+	net.stop()
+	
+
+if __name__ == '__main__':
+	setLogLevel('info')
+	run_fvtopo()
+
+
+# Preserve the --custom functionality.
+topos = { 'fvtopo': FVTopo}

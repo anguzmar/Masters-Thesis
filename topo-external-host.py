@@ -1,11 +1,17 @@
 #!/usr/bin/python
 
-# Based on:
-# normals://github.com/onstutorial/onstutorial/blob/master/flowvisor_scripts/flowvisor_topo.py.
+# Add mininet's directory to path.
+import sys
+sys.path.append('/home/mininet/mininet')
 
 from mininet.topo import Topo
+from mininet.net import Mininet
+from mininet.link import Intf, TCLink
+from mininet.node import RemoteController
 
 class FVTopo(Topo):
+# Based on:
+# normals://github.com/onstutorial/onstutorial/blob/master/flowvisor_scripts/flowvisor_topo.py.
 
     def __init__(self):
         # Initialize topology.
@@ -41,10 +47,13 @@ class FVTopo(Topo):
         self.addLink('h3', 's4', **host_link_config)
         self.addLink('h4', 's4', **host_link_config)
 
-	# Add external interface.
-	intfName = 'eth0'
-	switch = self.switches[0]
-	info('*** Adding hardware interface', intfName, 'to switch', switch.name, '\n')
-	_intf = Intf(intfName, node=switch)
 
-topos = {'fvtopo': FVTopo}
+if __name__ == '__main__':
+   # Create topology. 
+   net = Mininet(topo = FVTopo, controller = RemoteController, autoSetMacs = True, 
+                 autoStaticArp = True, link = TCLink)
+
+   # Run it.
+    net.start()
+    CLI(net)
+    net.stop()

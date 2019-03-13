@@ -11,6 +11,7 @@ from mininet.node import RemoteController
 from mininet.cli import CLI
 from mininet.log import setLogLevel
 
+
 class FVTopo(Topo):
 # Based on:
 # normals://github.com/onstutorial/onstutorial/blob/master/flowvisor_scripts/flowvisor_topo.py.
@@ -51,19 +52,19 @@ class FVTopo(Topo):
 
 
 def run_fvtopo():
-	# Create topology. 
-	net = Mininet(topo = FVTopo(), controller = RemoteController, autoSetMacs = True, 
-                      autoStaticArp = True, link = TCLink)
+    # Create topology.
+    net = Mininet(topo = FVTopo(), controller = RemoteController, autoSetMacs = True,
+                  autoStaticArp = True, link = TCLink)
 
-	# Run it.
-	net.start()
-	CLI(net)
-	net.stop()
-	
+    # Run it.
+    net.start()
+    CLI(net)
+    net.stop()
+
 
 if __name__ == '__main__':
-	setLogLevel('info')
-	run_fvtopo()
+    setLogLevel('info')
+    run_fvtopo()
 
 
 # Preserve the --custom functionality.

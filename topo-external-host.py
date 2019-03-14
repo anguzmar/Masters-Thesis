@@ -9,7 +9,7 @@ from mininet.net import Mininet
 from mininet.link import Intf, TCLink
 from mininet.node import RemoteController
 from mininet.cli import CLI
-from mininet.log import setLogLevel
+from mininet.log import setLogLevel, info
 
 
 class FVTopo(Topo):
@@ -55,6 +55,13 @@ def run_fvtopo():
     # Create topology.
     net = Mininet(topo = FVTopo(), controller = RemoteController, autoSetMacs = True,
                   autoStaticArp = True, link = TCLink)
+
+    # Add external interface.
+    intfName = 'eth0'
+    switch = net.switches[0]
+    info('*** Adding hardware interface', intfName, 'to switch',
+    switch.name, '\n')
+    _intf = Intf(intfName, node=switch)
 
     # Run it.
     net.start()

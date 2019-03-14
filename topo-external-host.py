@@ -2,6 +2,7 @@
 
 # Add mininet's directory to path.
 import sys
+import re
 sys.path.append('/home/mininet/mininet')
 
 from mininet.topo import Topo
@@ -10,6 +11,7 @@ from mininet.link import Intf, TCLink
 from mininet.node import RemoteController
 from mininet.cli import CLI
 from mininet.log import setLogLevel, info
+from mininet.util import quietRun
 
 
 class FVTopo(Topo):
@@ -50,6 +52,19 @@ class FVTopo(Topo):
         self.addLink('h3', 's4', **host_link_config)
         self.addLink('h4', 's4', **host_link_config)
 
+def checkIntf(intf):
+    """Make sure intf exists and is not configured."""
+
+    config = quietRun('ifconfig %s 2>/dev/null' % intf, shell=True)
+    if not config:
+        error('Error:', intf, 'does not exist!\n')
+        exit(1)
+
+    ips = re.findall(r'\d+\.\d+\.\d+\.\d+', config)
+    if ips:
+        error('Error:', intf, 'has an IP address, and is probably in use!\n')
+        exit(1)
+
 
 def run_fvtopo():
     # Create topology.
@@ -58,9 +73,11 @@ def run_fvtopo():
 
     # Add external interface.
     intfName = 'eth0'
+    info('*** Checking', intfName, '\n')
+    checkIntf(intfName)
+
     switch = net.switches[0]
-    info('*** Adding hardware interface', intfName, 'to switch',
-    switch.name, '\n')
+    info('*** Adding hardware interface', intfName, 'to switch', switch.name, '\n')
     _intf = Intf(intfName, node=switch)
 
     # Run it.

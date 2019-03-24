@@ -1,7 +1,7 @@
-#!bin/bash
+#!/bin/bash
 
 # Delete previous flows in case they are any.
-sudo-ovs-ofctl del-flows s1
+sudo ovs-ofctl del-flows s1
 
 # Make sure ARP messages reach their destination (although not very efficient).
 sudo ovs-ofctl add-flow s1 arp,actions=flood

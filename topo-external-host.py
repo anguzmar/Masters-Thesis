@@ -52,6 +52,7 @@ class FVTopo(Topo):
         self.addLink('h3', 's4', **host_link_config)
         self.addLink('h4', 's4', **host_link_config)
 
+
 def checkIntf(intf):
     """Make sure intf exists and is not configured."""
 
@@ -69,7 +70,7 @@ def checkIntf(intf):
 def run_fvtopo():
     # Create topology.
     net = Mininet(topo = FVTopo(), controller = RemoteController, autoSetMacs = True,
-                  autoStaticArp = True, link = TCLink)
+                  autoStaticArp = False, link = TCLink)
 
     # Add external interface.
     intfName = 'eth0'

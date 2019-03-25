@@ -10,7 +10,7 @@ from mininet.net import Mininet
 from mininet.link import Intf, TCLink
 from mininet.node import RemoteController
 from mininet.cli import CLI
-from mininet.log import setLogLevel, info
+from mininet.log import setLogLevel, info, error
 from mininet.util import quietRun
 
 
@@ -37,7 +37,7 @@ class FVTopo(Topo):
 
         # Create host nodes.
         for i in range(N_hosts):
-            hconfig = {'inNamesapce':True, 'ip': "192.168.1.20%d" % (i)}
+            hconfig = {'inNamesapce':True, 'ip': "10.0.0.%d" % (i+1)}
             self.addHost('h%d' % (i+1), **hconfig)
 
         # Add switch links.
@@ -74,7 +74,7 @@ def run_fvtopo():
     # Add external interface.
     intfName = 'eth0'
     info('*** Checking', intfName, '\n')
-    checkIntf(intfName)
+    #checkIntf(intfName)
 
     switch = net.switches[0]
     info('*** Adding hardware interface', intfName, 'to switch', switch.name, '\n')

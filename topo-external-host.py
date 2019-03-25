@@ -13,8 +13,8 @@ from mininet.log import setLogLevel, info
 
 
 class FVTopo(Topo):
-# Based on:
-# normals://github.com/onstutorial/onstutorial/blob/master/flowvisor_scripts/flowvisor_topo.py.
+"""Based on:
+https://github.com/onstutorial/onstutorial/blob/master/flowvisor_scripts/flowvisor_topo.py"""
 
     def __init__(self):
         # Initialize topology.

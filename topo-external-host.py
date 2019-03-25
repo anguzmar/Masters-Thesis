@@ -76,4 +76,4 @@ if __name__ == '__main__':
 
 
 # Preserve the --custom functionality.
-topos = { 'fvtopo': FVTopo}
+topos = {'fvtopo': FVTopo}

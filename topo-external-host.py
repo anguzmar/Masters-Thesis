@@ -54,7 +54,7 @@ class FVTopo(Topo):
 def run_fvtopo():
 	# Create topology.
 	net = Mininet(topo = FVTopo(), controller = RemoteController, autoSetMacs = True,
-				  autoStaticArp = False, link = TCLink)
+				  autoStaticArp = True, link = TCLink)
 
 	# Add external interface.
 	intfName = 'eth0'

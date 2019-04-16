@@ -18,7 +18,7 @@ fvctl -n add-flowspace dpid1_port2-LoRa 1 100 in_port=2 LoRa=7
 fvctl -n add-flowspace dpid1_port1-LoRa 1 1 in_port=1 Normal=7
 # External interface on switch 1.
 fvctl -n add-flowspace dpid1_port5-Normal 1 1 in_port=5 Normal=7
-fvctl -n add-flowspace dpid1_port5-Normal 1 100 in_port=5,nw_tos=8 LoRa=7
+fvctl -n add-flowspace dpid1_port5-LoRa 1 100 in_port=5,nw_tos=8 LoRa=7
 
 # Add flowspaces for switch 2.
 fvctl -n add-flowspace dpid2 2 1 any Normal=7

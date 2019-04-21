@@ -1,4 +1,4 @@
-j This script creates two slices: LoRa and Non-LoRa traffic. To distinguish between LoRa and
+# This script creates two slices: LoRa and Non-LoRa traffic. To distinguish between LoRa and
 # Non-LoRa traffic we make use of the "Type of Service" IPv4 header.
 
 # Additionally, this script only works for the topology displayed at:

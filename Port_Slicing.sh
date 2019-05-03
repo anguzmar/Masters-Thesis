@@ -1,4 +1,4 @@
-# This script creates two slices: LoRa and Non-LoRa traffic.
+# This script creates two slices: LoRa and Regular traffic, based on TCP ports.
 
 # Additionally, this script only works for the topology displayed at:
 # https://github.com/onstutorial/onstutorial/wiki/Flowvisor-Exercise.

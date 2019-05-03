@@ -1,4 +1,4 @@
-# This script creates two slices: video and Non-video traffic.
+# This script creates two slices: LoRa and Regular traffic, based on IP addresses.
 
 # Additionally, this script only works for the topology displayed at:
 # https://github.com/onstutorial/onstutorial/wiki/Flowvisor-Exercise.

@@ -26,3 +26,7 @@ fvctl -n add-flowspace dpid4_LoRa 4 100 nw_dst=10.0.0.1 LoRa=7
 fvctl -n add-flowspace dpid4_Regular 4 1 any Regular=7
 fvctl -n add-flowspace dpid4_Regular_port1 4 1 in_port=1 Regular=7
 fvctl -n add-flowspace dpid4_LoRa_port2 4 1 in_port=2 LoRa=7
+<<<<<<< HEAD
+=======
+
+>>>>>>> d634235ad839ae7e43367c044a0d2f87bb67030c

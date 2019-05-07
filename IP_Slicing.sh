@@ -17,6 +17,9 @@ fvctl -n add-flowspace dpid1_port3-Regular 1 1 in_port=3 Regular=6
 fvctl -n add-flowspace dpid1_port4-LoRa 1 10 in_port=4,nw_src=10.0.0.1 LoRa=6
 fvctl -n add-flowspace dpid1_port4-Regular 1 1 in_port=4 Regular=6
 
+fvctl -n add-flowspace dpid1_port5-LoRa 1 10 in_port=5,nw_src=10.0.0.1 LoRa=6
+fvctl -n add-flowspace dpid1_port5-Regular 1 1 in_port=5 Regular=6
+
 
 # Add flowspaces for switch 2.
 fvctl -n add-flowspace dpid2 2 1 any Regular=6

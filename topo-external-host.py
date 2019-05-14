@@ -29,14 +29,18 @@ class FVTopo(Topo):
 		host_link_config = {}
 
 		# Create switch nodes.
-		for i in range(N_switches):
-			sconfig = {'dpid': "%016x" % (i+1)}
-			self.addSwitch('s%d' % (i+1), **sconfig)
+		for i in range(1, N_switches + 1):
+			sconfig = {'dpid': "%016x" % (i)}
+			self.addSwitch('s%d' % (i), **sconfig)
 
 		# Create host nodes.
-		for i in range(N_hosts):
-			hconfig = {'inNamesapce':True, 'ip': "10.0.0.%d" % (i+1)}
-			self.addHost('h%d' % (i+1), **hconfig)
+		for i in range(1, N_hosts + 1):
+			if i%2 == 0:
+				hconfig = {'inNamesapce':True, 'ip': "192.168.0.%d" % (i)}
+				self.addHost('h%d' % (i), **hconfig)
+			if i%2 != 0:
+				hconfig = {'inNamesapce':True, 'ip': "10.0.0.%d" % (i)}
+				self.addHost('h%d' % (i), **hconfig)
 
 		# Add switch links.
 		self.addLink('s1', 's2', **normal_link_config)

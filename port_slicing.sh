@@ -1,7 +1,5 @@
 # This script creates two slices: fast and slow traffic.
 
-# Additionally, this script only works for the topology displayed at:
-# https://github.com/onstutorial/onstutorial/wiki/Flowvisor-Exercise.
 
 # Create both slices.
 fvctl -n add-slice fast tcp:localhost:10001 admin@fastSlice

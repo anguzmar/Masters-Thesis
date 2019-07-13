@@ -1,2 +1,2 @@
-# TFM (Work in Progress)
+# Master's Thesis
 Compilation of the different scripts used.

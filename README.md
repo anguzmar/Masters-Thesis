@@ -9,10 +9,10 @@ Network** (SDN):
 2. IP address slicing.
 
 #### TCP Port Slicing
-![alt text](https://github.com/anguzmar/TFM/blob/master/Images_Readme/mininet_topology_port_slicing.png "Logo Title Text 1")
+![](https://github.com/anguzmar/TFM/blob/master/images_readme/mininet_topology_port_slicing.png)
 
 #### IP Address Slicing
-![alt text](https://github.com/anguzmar/TFM/blob/master/Images_Readme/mininet_topology_IP_slicing.png "Logo Title Text 1")
+![](https://github.com/anguzmar/TFM/blob/master/images_readme/mininet_topology_IP_slicing.png)
 
 ## Tools Used
 Main tools involved in the making of the project.

@@ -17,7 +17,7 @@ fvctl -n add-flowspace dpid1_default 1 1 any Regular=6
 fvctl -n add-flowspace dpid1_DevNull_port1_ARP 1 300 in_port=1,nw_src=10.0.0.0/16,dl_type=0x0806 DevNull=6
 fvctl -n add-flowspace dpid1_Regular_port1 1 1 in_port=1 Regular=6
 
-fvctl -n add-flowspace dpid1_LoRa_port2_LoRa 1 200 in_port=2,nw_src=10.0.0.0/16 LoRa=6
+fvctl -n add-flowspace dpid1_LoRa_port2 1 200 in_port=2,nw_src=10.0.0.0/16 LoRa=6
 fvctl -n add-flowspace dpid1_DevNull_port2 1 1 in_port=2 DevNull=2
 
 
@@ -43,5 +43,5 @@ fvctl -n add-flowspace dpid4_default 4 1 any Regular=6
 fvctl -n add-flowspace dpid4_DevNull_port1_ARP 4 300 in_port=1,nw_src=10.0.0.0/16,dl_type=0x0806 DevNull=6
 fvctl -n add-flowspace dpid4_Regular_port4 4 1 in_port=1 Regular=6
 
-fvctl -n add-flowspace dpid4_LoRa_port2_LoRa 4 200 in_port=2,nw_src=10.0.0.0/16 LoRa=6
+fvctl -n add-flowspace dpid4_LoRa_port2 4 200 in_port=2,nw_src=10.0.0.0/16 LoRa=6
 fvctl -n add-flowspace dpid4_DevNull_port2 4 1 in_port=2 DevNull=2

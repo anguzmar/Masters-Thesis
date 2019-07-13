@@ -1,5 +1,5 @@
 # Master's Thesis
-This repository hols the different scripts used for my Master's thesis, as well as the final
+This repository holds the different scripts used for my Master's thesis, as well as the final
 document itself.
 
 ### Overview

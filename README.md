@@ -16,7 +16,7 @@ Network** (SDN):
 
 ### Tools Used
 Main tools involved in the making of the project.
-+ **Mininet**. I did not have OpenFlow switches I had to rely on emulation.
++ **Mininet**. I did not have OpenFlow switches, so I had to rely on emulation.
 + **FlowVisor**. Open source OpenFlow hipervisor used for the slicing. Pretty outdated but I could not find another open source alternative.
 + **POX**. OpenFlow controller.
 

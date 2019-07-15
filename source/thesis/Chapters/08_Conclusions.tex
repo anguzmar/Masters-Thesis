@@ -1,0 +1,24 @@
+\chapter{Conclusions}
+First off, software defined networks are extremely useful by themselves. They provide us with much better scalability, they deal with the issue of heterogeneous hardware and compatibility across the same network and offer a broader network view to perform traffic engineering. 
+
+Furthermore, an SDN hypervisor that sits between the physical devices and the OpenFlow controllers proves to be a very powerful tool as well. It simplifies the deployment of OpenFlow controllers while, at the same time, dealing with the problem of adaptability in complex networks and enabling a feasible and maintainable way to perform network virtualization or network slicing.
+
+Speaking of network virtualization, its real world applications are endless, as pointed out at the end of the previous chapter. It is definitely something to consider when designing a network because, when used correctly, it provides the network with great flexibility, scalability, adaptability and efficiency.
+
+On the other hand, the development of open source hypervisors seems to have reached a full stop. FlowVisor is the only one available at the time of writing this document and it has not seen an update to its code base since August 2013. However, the technique itself is very much still in use, as it is a prevalent feature of the up and coming 5G cellular networks.   
+
+In summary, network slicing is a very powerful technique and definitely has a bright future in the coming generation of cellular networks. Yet, it looks like said future lies in the private industry, as opposed to open source.
+
+\section{Future Work}
+If this project were to be continued, the first thing we would do would be to test both implementations in a real network with physical OpenFlow devices. Testing using a virtual network is acceptable, but there might be problems that only arise once deployed in a physical one.
+
+On a different note, exploring different ways of slicing the network would also be interesting. So far we have tried TCP port and IP address slicing, but FlowVisor offers a few more parameters to choose from.
+\begin{itemize}
+    \item MAC address.
+    \item Ethernet protocol.
+    \item Physical switch port.
+    \item Network protocol.
+    \item ToS/DSCP IPv4 header.
+\end{itemize}
+
+Overall, this project can definitely be extended and improved upon, although it has managed to address the main points that we aimed to cover.

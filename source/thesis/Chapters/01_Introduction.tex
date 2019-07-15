@@ -1,0 +1,49 @@
+\chapter{Introduction} \label{chapter:introduction}
+
+\section{Context and Motivation}
+The world of telecommunications is evolving. Every so often there is a new network protocol, technique or application. A recent one that is gaining a lot of traction is the Internet of Things (IoT), which will have proper support in the coming generation of cell networks, in addition to other new protocols such as enhanced mobile broadband (eMBB) and ultra-reliable low latency communications (URLLC).
+
+With such heterogeneous traffic being handled by the network, it is not efficient to treat everything equally, as each type of traffic has its own needs. For instance, traffic coming from an IoT device usually does not need much bandwidth whatsoever. As a result, there is a need to distinguish between different types of traffic so that each one can be treated accordingly.  
+
+The old fashioned solution to this problem would be to apply QoS techniques, based on priorities, or traffic engineering protocols such as MPLS. However, both alternatives suffer from some limitations.
+\begin{itemize}
+    \item DiffServ, currently the most common implementation of QoS, works time with aggregated traffic. This means that it cannot distinguish between two tenants sending the same type of traffic.
+    \item DiffServ and MPLS both require that the network implements additional capabilities in order to understand the tags assigned to the packets.
+    \item The routes assigned to MPLS can be considered static and they are not trivial to modify. This creates an adaptability problem.
+\end{itemize}
+
+Given these limitations, a more modern solution arises alongside the emergence of Software Defined Networks (SDN). It involves taking advantage of the nature of SDN and slicing it into different virtual networks, this is known as \textbf{network slicing}. But yet again, this approach comes with some difficulties, e.g., scalability. This is a consequence of, mainly, the lack of maturity of the SDN technology. 
+
+So, in summary, the motivation of the present project lies on addressing the current difficulties and pitfalls of slicing an SDN with the conventional methods.
+
+\section{Goals and Reach of the Project}
+
+First of all, it is important to mention that we do not intend on developing a tool or framework from scratch, that would be out of the scope of this project. The intent of the project resides on the deployment of already existing tools and frameworks, as well as testing their functionality.
+
+Taking that first point into account and the motivation explained above, we will establish this project's objective as the search of a method to slice a network in such a way that is reasonably simple and easy to maintain. 
+
+Furthermore, let us establish a starting point. We are already aware that the solution we are looking for is the introduction of a new element called \textbf{Hypervisor}. An entity that sits between the forwarding device and the OpenFlow controller. This is what will enable us to perform the type of network slicing we are aiming for.
+
+In addition, we want this proof of concept to be simple as well, so overly complicated networks will be avoided. We will try to use a sensible network topology that allows for a clean network slicing, without obfuscating the configuration with unnecessary complexity.
+
+Finally, we will provide some network slicing examples that could be applied to real production scenario, albeit at a smaller scale.
+
+\section{Structure of the Document}
+The structure for the present project will consist of eight chapters.
+\begin{enumerate}
+    \item \textbf{Introduction}. Brief explanation of the motivation and context that led to the making of this project.
+    \item \textbf{Technologies Involved}. Overview of the main relevant technologies that take part in this project.
+    \item \textbf{State of the Art}. Review of the current solutions to the problem we are trying to solve.
+    \item \textbf{Planning and Cost Estimate}. Rough estimate of the time and budget needed.
+    \item \textbf{Environment Setup}. Description of how to set up the virtual environment used to test the network slicing.
+    \item \textbf{Implementation}. Design and application of the network slicing.
+    \item \textbf{Testing}. Summary of the different tests performed in order to verify that everything is working correctly.
+    \item \textbf{Conclusions}. Deliberation about the results of the project and future work.
+\end{enumerate}
+
+In addition, this document has three appendices that cover the code and scripts used.
+\begin{enumerate}
+    \item \textbf{Appendix A}. Python code used to generate the Mininet topology.
+    \item \textbf{Appendix B}. Bash script for TCP port based slicing.
+    \item \textbf{Appendix C}. Bash script for IP address based slicing.
+\end{enumerate}

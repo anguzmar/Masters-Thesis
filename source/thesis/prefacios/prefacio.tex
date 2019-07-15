@@ -1,0 +1,119 @@
+\chapter*{}
+\input{portada/portada_2}
+
+
+\cleardoublepage
+\thispagestyle{empty}
+
+\begin{center}
+{\large\bfseries Particionado de Red Basado en Redes SDN}\\
+\end{center}
+\begin{center}
+Ángel Guzmán Martínez\\
+\end{center}
+
+%\vspace{0.7cm}
+\noindent{\textbf{Palabras clave}:  hipervisor, particionado de red, SDN, tráfico heterogéneo.}\\
+
+\vspace{0.7cm}
+\noindent{\textbf{Resumen}}\\
+
+Hoy en día, las diferentes redes desplegadas alrededor del mundo tienen que lidiar con tráfico muy heteroǵeneo. Esto se acentúa más aún con la introducción del Internet de las Cosas. Especialmente con la llegada del 5G en un futuro próximo, las redes celulares tendrán que tratar con diferentes flujos de tráfico cuyas necesidades de ancho de banda difieren en gran medida.
+
+Tradicionalmente, para dar un trato especializado a diferentes flujos de tráfico se aplican técnicas de \textit{Quality of Service} (QoS). Dichas técnicas permiten a las redes distinguir entre diferentes tipos de paquetes y aplicarles políticas distintas. 
+
+No obstante, el uso de mecanismos de QoS, como \textit{DiffServ} que es la implementación más habitual, tiene sus limitaciones. Por ejemplo, no es posible aplicar ingeniería de tráfico sino que se basa en el uso de prioridades. Es decir, los paquetes prioritarios viajan junto al resto del tráfico, pero son procesados antes por los \textit{routers} y pasan menos tiempo en colas. 
+
+Para aplicar ingeniería de tráfico, habría que hacer uso de otros protocolos como MPLS. A su vez, MPLS tiene también sus desventajas. Requiere que los \textit{routers} tengan capacidades adicionales y tiene carencias de flexibilidad y adaptabilidad.
+
+Una de las posibles soluciones a este problema consiste en particionar Redes Definidas por \textit{Software} (SDN), ya que esta técnica ofrece la posiblidad de separar flujos de datos del mismo tipo de tráfico. No obstante, esta tecnología es relativamente reciente y no está lo suficientemente madura y, en consecuencia, presenta algunos problemas en su implementación.
+
+En el presente proyecto plantea la exploración del uso de un hipervisor en SDN para simplificar el particionado de la red. Al mismo tiempo, usar un hipervisor solventa, o al menos palia, los inconvenientes que presenta el método covencional de redes SDN sin hipervisor, especialmente la escalabilidad, flexibilidad y adaptabilidad.
+
+\cleardoublepage
+
+
+\thispagestyle{empty}
+
+
+\begin{center}
+{\large\bfseries SDN Based Network Slicing}\\
+\end{center}
+\begin{center}
+Angel Guzman-Martinez\\
+\end{center}
+
+%\vspace{0.7cm}
+\noindent{\textbf{Keywords}: heterogeneous traffic, hypervisor, network slicing, SDN.}\\
+
+\vspace{0.7cm}
+\noindent{\textbf{Abstract}}\\
+
+Nowadays, the different networks deployed around the world have to handle very heterogeneous traffic. Even more so with the introduction of the Internet of Things. Furthermore, with the arrival of 5G in the near future, cell networks will have to deal with different types of traffic whose bandwidth needs vary widely.
+
+Traditionally, in order to treat each type of traffic in a different manner, Quality of Service (QoS) techniques are applied. These techniques allow networks to distinguish between different types of packets and apply different policies to each type.
+
+However, QoS techniques, such as DiffServ which is the most common implementation, have some limitations. For instance, it is not possible to apply traffic engineering, it relies on the use of priorities instead. This means the high priority packets are routed with the rest of the traffic, but they are processed faster and spend less time waiting in queues. 
+
+To perform traffic engineering, other protocols, such as MPLS, need to be used. Likewise, MPLS has its own drawbacks. It requires routers with additional capabilities and lacks flexibility and adaptability.
+
+One of the possible solutions involves slicing Software Defined Networks (SDN). Yet, this technology is relatively recent and is not mature enough. Consequently, there are some implementation issues.
+
+As a result, the present project proposes to explore the use of hypervisor within SDN, in order to simplify network slicing while solving, or at least diminishing, the pitfalls of a conventional SDN without hypervisor, i.e., scalibility, flexibility and adaptability.
+
+\chapter*{}
+\thispagestyle{empty}
+
+\noindent\rule[-1ex]{\textwidth}{2pt}\\[4.5ex]
+
+Yo, \textbf{Ángel Guzmán Martínez}, alumno de la titulación Máster Universitario en Ingeniería de Telecomunicación de la \textbf{Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación de la Universidad de Granada}, con DNI 75573604, autorizo la ubicación de la siguiente copia de mi Trabajo Fin de Master en la biblioteca del centro para que pueda ser consultada por las personas que lo deseen.
+
+\vspace{6cm}
+
+\noindent Fdo: Ángel Guzmán Martínez
+
+\vspace{2cm}
+
+\begin{flushright}
+Granada, julio de 2019.
+\end{flushright}
+
+
+\chapter*{}
+\thispagestyle{empty}
+
+\noindent\rule[-1ex]{\textwidth}{2pt}\\[4.5ex]
+
+D. \textbf{Jorge Navarro Ortiz}, Profesor Titular de Universidad del Área de Ingeniería Telemática del Departamento de Teoría de la Señal, Telemática y Comunicaciones de la Universidad de Granada.
+
+\vspace{0.5cm}
+
+\textbf{Informa:}
+
+\vspace{0.5cm}
+
+Que el presente trabajo, titulado \textit{\textbf{SDN Based Network Slicing}}, ha sido realizado bajo su supervisión por \textbf{Ángel Guzmán Martínez}, y autorizo la defensa de dicho trabajo ante el tribunal que corresponda.
+
+\vspace{0.5cm}
+
+Y para que conste, expide y firma el presente informe en Granada a 27 de junio de 2019.
+
+\vspace{1cm}
+
+\textbf{Los directores:}
+
+\vspace{5cm}
+
+\noindent \textbf{Jorge Navarro Ortiz \ \ \ \ \ }
+
+\chapter*{Acknowledgements}
+\thispagestyle{empty}
+
+       \vspace{1cm}
+
+
+Thanks to Jorge, he is such a nice, hardworking person and always willing to help. Although, because of this, he is also very busy most of the time. He also accepted to supervise my thesis despite me asking a little bit late.
+
+Thanks to Juanma, for lending us a USB-Ethernet adapter in times of need. Great person as well, always offering advice.
+
+Also thanks to my friends, for constantly nagging me about how my thesis is going. While annoying at the time, it helped me stay motivated to finish it so that they would shut up about it. 

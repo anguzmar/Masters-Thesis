@@ -1,6 +1,6 @@
 # Master's Thesis
-This repository holds the different scripts used for my Master's thesis, as well as the final
-document itself.
+This repository holds the different scripts used for my Master's thesis, the final document itself,
+the presentation, images and source files.
 
 ## Overview
 In summary, in this thesis we perform two types of network slicing on top of a **Software Defined

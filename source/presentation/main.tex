@@ -28,7 +28,7 @@
 \begin{document}
 
 \begin{frame}
-    \titlepage    
+    \titlepage
 \end{frame}
 
 \begin{frame}{Índice}
@@ -61,7 +61,7 @@
         \item Familiarizaros con el concepto de SDN y \textit{network slicing}.
         \item Particionar una red SDN y comprobar su funcionamiento.
     \end{itemize}\vspace{20pt}
-    
+
     \onslide<2>{\textbf{¿Por qué particionar una red (\textit{network slicing})?}\vspace{10pt}
     \begin{itemize}
         \item Tráfico heterogéneo. IoT, eMBB, URLLC...
@@ -107,7 +107,7 @@
     \begin{itemize}
         \item Flexibilidad y adaptabilidad.
         \item Visión general de la red.
-        \item Monitorización. 
+        \item Monitorización.
         \item \textit{Hardware} homogéneo.
         \item Mantenimiento y configuración.
     \end{itemize}
@@ -130,8 +130,8 @@
    \begin{block}{\textit{Comunicación southbound}}
         Es la comunicación entre los \textit{forwarding devices} y el controlador o controladores.
    \end{block}\vspace{10pt}
-   
-    Los tipos de paquetes más importantes son: 
+
+    Los tipos de paquetes más importantes son:
     \begin{itemize}
         \item \textit{Packet\_In}.
         \item \textit{Packet\_Out}.
@@ -147,7 +147,7 @@
 \begin{frame}[t]{OpenFlow}
     Estructura de una regla de flujo (\textit{flow}) OpenFlow.\vspace{30pt}
     \begin{columns}[t]
-    \column{1.9in} 
+    \column{1.9in}
     \textbf{Matching Fields}\\
     Dirección IP destino \\
     Dirección IP origen\\
@@ -161,7 +161,7 @@
     Packet\_In\\
     Inundar\\
     \end{columns}
-    
+
     \vspace{40pt}
     \begin{overlayarea}{\textwidth}{2cm}
     \only<2>{sudo ovs-ofctl add-flow s1 nw\_dst=10.0.0.1,actions=output:2}
@@ -216,19 +216,19 @@
    \begin{overlayarea}{\textwidth}{6cm}
    Regla ejemplo con la sintaxis usada por FlowVisor. Análogo a las reglas OpenFlow.\vspace{15pt}\\
    \only<1> {fvctl -n add-flowspace example 1 200 in\_port=2 LoRa=6}
-   \only<2> {\alert{fvctl -n add-flowspace} example 1 200 in\_port=2 LoRa=6\\[20pt] 
+   \only<2> {\alert{fvctl -n add-flowspace} example 1 200 in\_port=2 LoRa=6\\[20pt]
             \centering \large \textbf{\textcolor{magenta}{Comando para añadir un flowspace}}}
-   \only<3> {fvctl -n add-flowspace \alert{example} 1 200 in\_port=2 LoRa=6\\[20pt] 
+   \only<3> {fvctl -n add-flowspace \alert{example} 1 200 in\_port=2 LoRa=6\\[20pt]
             \centering \large \textbf{\textcolor{magenta}{Nombre del \textit{flowspace}}}}
-   \only<4> {fvctl -n add-flowspace example \alert{1} 200 in\_port=2 LoRa=6\\[20pt] 
+   \only<4> {fvctl -n add-flowspace example \alert{1} 200 in\_port=2 LoRa=6\\[20pt]
             \centering \large \textbf{\textcolor{magenta}{Identificador del \textit{switch} (DPID) }}}
-   \only<5> {fvctl -n add-flowspace example 1 \alert{200} in\_port=2 LoRa=6\\[20pt] 
+   \only<5> {fvctl -n add-flowspace example 1 \alert{200} in\_port=2 LoRa=6\\[20pt]
             \centering \large \textbf{\textcolor{magenta}{Prioridad de la regla}}}
-   \only<6> {fvctl -n add-flowspace example 1 200 \alert{in\_port=2} LoRa=6\\[20pt] 
+   \only<6> {fvctl -n add-flowspace example 1 200 \alert{in\_port=2} LoRa=6\\[20pt]
             \centering \large \textbf{\textcolor{magenta}{Campo que analizar el paquete}}}
-   \only<7> {fvctl -n add-flowspace example 1 200 in\_port=2 \alert{LoRa}=6\\[20pt] 
+   \only<7> {fvctl -n add-flowspace example 1 200 in\_port=2 \alert{LoRa}=6\\[20pt]
             \centering \large \textbf{\textcolor{magenta}{\textit{Slice} al que asignar el paquete}}}
-   \only<8> {fvctl -n add-flowspace example 1 200 in\_port=2 LoRa\alert{=6}\\[20pt] 
+   \only<8> {fvctl -n add-flowspace example 1 200 in\_port=2 LoRa\alert{=6}\\[20pt]
             \centering \large \textbf{\textcolor{magenta}{Permisos del slice}}}
     \end{overlayarea}
 \end{frame}
@@ -282,7 +282,7 @@
        \item Mininet.
        \item Iperf.
    \end{itemize}\vspace{10pt}
-   
+
    \onslide<2> Como controlador OpenFlow usaremos \textbf{POX}.
 \end{frame}
 
